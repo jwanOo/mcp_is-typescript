@@ -106,7 +106,11 @@ describe('resource tools', () => {
 
   // Prism tests are disabled
   test.skip('createPackage: required and optional params', async () => {
-    const response = await client.tools.createPackage({ id: 'id', name: 'name', shortText: 'shortText' });
+    const response = await client.tools.createPackage({
+      id: 'id',
+      name: 'name',
+      shortText: 'shortText',
+    });
   });
 
   // Prism tests are disabled
@@ -458,7 +462,11 @@ describe('resource tools', () => {
 
   // Prism tests are disabled
   test.skip('updateIflow: only required params', async () => {
-    const responsePromise = client.tools.updateIflow({ id: 'id', autoDeploy: true, files: [{}] });
+    const responsePromise = client.tools.updateIflow({
+      id: 'id',
+      autoDeploy: true,
+      files: [{}],
+    });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -473,13 +481,23 @@ describe('resource tools', () => {
     const response = await client.tools.updateIflow({
       id: 'id',
       autoDeploy: true,
-      files: [{ appendMode: true, content: 'content', filepath: 'filepath' }],
+      files: [
+        {
+          appendMode: true,
+          content: 'content',
+          filepath: 'filepath',
+        },
+      ],
     });
   });
 
   // Prism tests are disabled
   test.skip('updateMessageMapping: only required params', async () => {
-    const responsePromise = client.tools.updateMessageMapping({ id: 'id', autoDeploy: true, files: [{}] });
+    const responsePromise = client.tools.updateMessageMapping({
+      id: 'id',
+      autoDeploy: true,
+      files: [{}],
+    });
     const rawResponse = await responsePromise.asResponse();
     expect(rawResponse).toBeInstanceOf(Response);
     const response = await responsePromise;
@@ -494,7 +512,13 @@ describe('resource tools', () => {
     const response = await client.tools.updateMessageMapping({
       id: 'id',
       autoDeploy: true,
-      files: [{ appendMode: true, content: 'content', filepath: 'filepath' }],
+      files: [
+        {
+          appendMode: true,
+          content: 'content',
+          filepath: 'filepath',
+        },
+      ],
     });
   });
 });
