@@ -1,6 +1,6 @@
 {
   "name": "mcp_is",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The official TypeScript library for the Mcp Is API",
   "author": "Mcp Is <>",
   "types": "dist/index.d.ts",
